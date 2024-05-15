@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
 
   def create
     Article.create(article_params)
-    redirect_to index_path
+    redirect_to articles_path
   end
 
   def edit
@@ -24,6 +24,8 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+    @article.destroy
+    redirect_to articles_path
   end
 
   private

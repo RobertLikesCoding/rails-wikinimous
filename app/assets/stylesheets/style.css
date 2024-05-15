@@ -12,9 +12,15 @@ article {
   font-weight: 300;
   font-size: 120%;
 
-  a {
+  h2 {
     font-family: "Roboto Slab", serif;
     font-weight: 400;
     font-size: 2rem;
   }
+}
+
+i {
+  color: #1c71d8;
+  font-size: 2rem;
+  margin: 0 0.5rem 0 0;
 }
