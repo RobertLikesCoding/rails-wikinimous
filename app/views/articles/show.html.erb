@@ -1,14 +1,13 @@
+<% if flash[:notice] %>
+  <div class="alert alert-info"><%= flash[:notice] %></div>
+<% end %>
+
 <article>
   <h1><%= @article.title %></h1>
   <div class="d-flex">
-    <%= link_to edit_article_path(@article) do %>
-      <i class="fa-solid fa-pencil"></i>
-    <% end %>
-
-    <%= link_to article_path(@article), method: :delete, data: {turbo_method: "delete"} do %>
-      <i class="fa-solid fa-trash-can"></i>
-    <% end %>
+    <%= link_to edit_article_path(@article), class: "fa-solid fa-pencil" %>
+    <%= link_to article_path(@article), class: "fa-solid fa-trash-can" data: {turbo_method: "delete", turbo_confirm: "Are you sure?"} %>
   </div>
   <hr>
-  <p><%= @article.content %></p>
+  <%= @article.content %>
 </article>

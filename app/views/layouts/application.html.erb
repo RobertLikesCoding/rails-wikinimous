@@ -29,9 +29,11 @@
   <body>
     <%# NAVBAR %>
     <nav class="navbar bg-body-tertiary bg-light">
-      <div class="container-fluid d-flex">
-        <a class="navbar-brand logo link-dark" href="/">Wikinimous</a>
-        <a href="/article/new"><button class="btn btn-primary text-white my_button" type="" >New Article</button></a>
+      <div class="container-fluid">
+        <a class="navbar-brand logo link-dark" href="/articles">Wikinimous</a>
+        <%= link_to new_article_path do %>
+  <button class="btn btn-primary text-white my_button" type="button">New Article</button>
+<% end %>
       </div>
     </nav>
 
